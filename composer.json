@@ -35,5 +35,8 @@
     "psr-4": {
       "potibm\\SceneIdOauth2\\Test\\": "test/"
     }
+  },
+  "scripts": {
+    "check": "phpcs src test --standard=PSR12 -sp"
   }
 }

@@ -61,7 +61,8 @@ class SceneIdProvider extends AbstractProvider
 
     protected function createResourceOwner(array $response, AccessToken $token): ResourceOwnerInterface
     {
-        if (!key_exists('success', $response) ||
+        if (
+            !key_exists('success', $response) ||
             $response['success'] !== true ||
             ! key_exists('user', $response) ||
             ! is_array($response['user'])

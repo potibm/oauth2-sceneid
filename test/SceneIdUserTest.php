@@ -7,8 +7,10 @@ namespace potibm\SceneIdOauth2\Test;
 use PHPUnit\Framework\TestCase;
 use potibm\SceneIdOauth2\SceneIdUser;
 
-class SceneIdUserTest extends TestCase {
-    public function testSettingFromConstructor() {
+class SceneIdUserTest extends TestCase
+{
+    public function testSettingFromConstructor()
+    {
         $id = rand(0, 1000);
         $email = uniqid();
         $firstName = uniqid();
