@@ -142,7 +142,7 @@ class SceneIdProviderTest extends TestCase
         $this->assertEquals($lastname, $user->toArray()['lastname']);
         $this->assertEquals($nickname, $user->getDisplayname());
         $this->assertEquals($nickname, $user->toArray()['displayname']);
-   }
+    }
 
     public function testWithInvalidTokenResponse(): void
     {
@@ -167,7 +167,7 @@ class SceneIdProviderTest extends TestCase
         $token = $this->provider->getAccessToken('authorization_code', ['code' => 'mock_authorization_code']);
     }
 
-   public function testWithInvalidUserResponse(): void
+    public function testWithInvalidUserResponse(): void
     {
         $this->expectException(IdentityProviderException::class);
 
@@ -198,7 +198,5 @@ class SceneIdProviderTest extends TestCase
 
         $token = $this->provider->getAccessToken('authorization_code', ['code' => 'mock_authorization_code']);
         $user = $this->provider->getResourceOwner($token);
-
-   }
-
+    }
 }
